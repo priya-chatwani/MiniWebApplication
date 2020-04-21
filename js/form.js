@@ -16,7 +16,7 @@ function submit_by_id() {
             return false;
         }
     }
-    //document.getElementById("numbers_form").submit(); //form submission
+
     nums.sort(function(a, b) {return b - a});
     console.log("sorted", nums);
     alert("High: " + nums[0] + " Mid: " + nums[1] + " Low: " + nums[2]);
@@ -26,7 +26,7 @@ function submit_by_id() {
 
 function validate(num, num_regex, sendError, label) {
     if (num.length == 0) {
-        $('#'+sendError).text("* All fields are mandatory *"); // This Segment Displays The Validation Rule For All Fields
+        $('#'+sendError).text("* All fields are mandatory *");
         $('#'+label).focus();
         return false;
     }
