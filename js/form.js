@@ -26,13 +26,13 @@ function submit_by_id() {
 
 function validate(num, num_regex, sendError, label) {
     if (num.length == 0) {
-        $('#'+sendError).text("* All fields are mandatory *");
+        $('#'+sendError).text("Please fill out this field.");
         $('#'+label).focus();
         return false;
     }
     // Validating Number Field.
     else if (!num.match(num_regex) || num.length == 0) {
-        $('#'+sendError).text("* Please choose a valid number *"); 
+        $('#'+sendError).text("Please provide a valid number."); 
         $('#'+label).focus();
         return false;
     }
